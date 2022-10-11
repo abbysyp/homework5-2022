@@ -117,7 +117,7 @@ nav li a:visited {
         border: solid 2px #45addd;
         flex-basis: 325px;
     }
-    .gallery {
+    .gallery, #gallery {
         display: none;
     }
     .card ul li:nth-child(2)::after {
