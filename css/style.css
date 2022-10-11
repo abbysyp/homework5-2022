@@ -76,7 +76,7 @@ nav li a:visited {
         flex-basis: inherit;
     }
     #logo {
-        margin: inherit;
+        margin: 0;
     }
     .card {
         flex-basis: 275px;
@@ -100,7 +100,7 @@ nav li a:visited {
     }
 }
 
-@media (orientation: portrait) {
+@media (portrait) {
     body {
         font-family: Arial, Helvetica;
         background-image: none;
