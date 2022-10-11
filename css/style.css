@@ -100,7 +100,7 @@ nav li a:visited {
     }
 }
 
-@media print and (portrait) {
+@media print and (max-width: 40em) {
     body {
         font-family: Arial, Helvetica;
         background-image: none;
