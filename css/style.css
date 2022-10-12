@@ -1,3 +1,4 @@
+/* step 1: define animation for logo */
 @keyframes slidelogo {
     from {
         width: 25px;
@@ -9,33 +10,39 @@
     }
 }
 
+/* step 1: animate logo */
 #logo {
     animation: slidelogo 5s;
     margin: 0 auto;
 }
 
+/* step 2: style body */
 body {
     font-family: 'Poppins', serif;
     background-color: #f1f1f1;
     background-image: url(../images/concrete_seamless.png);
 }
 
+/* step 3: style all header tags with flex */
 header {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+/* step 4: style nav_links class with flex */
 .nav_links {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* step 5: links have same color after visited */
 nav li a:visited {
     color: #000ee0;
 }
 
+/* step 6: style header elements in card class */
 .card > header {
     background: #288088;
     border: solid 2px #45adad;
@@ -43,11 +50,13 @@ nav li a:visited {
     border-radius: 50px 50px 0 0;
 }
 
+/* step 6, 7: fix card borders and use flex-basis to initialize size */
 .card {
     border-radius: 50px 50px 0 0;
     flex-basis: 450px;
 }
 
+/* step 8: style pricing class with flex to supplement card class */
 .pricing {
     display: inline-flex;
     flex-direction: row;
@@ -56,28 +65,34 @@ nav li a:visited {
     align-content: center;
 }
 
+/* step 9: style gallery images */
 .gallery img {
     border: solid 10px #50c7c7;
     margin: 10px;
     width: 300px;
 }
 
+/* step 10: style gallery with flex */
 .gallery {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* screen size greater than 900px */
 @media screen and (min-width: 900px) {
+    /* step 11: style header and nav_links class with flex */
     header, .nav_links {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         flex-basis: inherit;
     }
+    /* reposition logo to match example */
     #logo {
         margin: 0;
     }
+    /* step 12: style pricing and card classes with flex properties */
     .card {
         flex-basis: 275px;
         display: inline-flex;
@@ -87,6 +102,7 @@ nav li a:visited {
         align-items: center;
         justify-content: center;
     }
+    /* step 13: style first header to be sticky on scroll */
     .skip + header {
         position: sticky;
         top: 0;
@@ -94,32 +110,41 @@ nav li a:visited {
     }
 }
 
+/* if user has reduced motion on */
 @media (prefers-reduced-motion) {
+    /* step 14: no logo animation */
     #logo {
         animation: none;
     }
 }
 
+/* page is printed in portrait mode */
 @media print and (max-width: 40em) {
+    /* step 15, 16: edit body */
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
+    /* step 17: edit nav_links */
     .nav_links {
         flex-direction: row;
         justify-content: space-around;
     }
+    /* step 18: edit pricing */
     .pricing {
         flex-flow: nowrap;
         align-items: end;
     }
+    /* step 19: edit cards with flex */
     .card {
         border: solid 2px #45addd;
         flex-basis: 325px;
     }
+    /* step 20: hide gallery */
     .gallery, #gallery {
         display: none;
     }
+    /* step 21: add thumbs up entity */
     .card ul li:nth-child(2)::after {
         content: '\1f44d'
     }
